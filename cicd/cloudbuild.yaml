@@ -2,7 +2,7 @@ steps:
 # Deploy the test workflow with the commit sha
 - id: 'deploy-test-workflow'
   name: 'gcr.io/cloud-builders/gcloud'
-  args: ['workflows', 'deploy', '$_WORKFLOW_NAME-$BRANCH_NAME-$SHORT_SHA', '--source', 'cicd/workflow.yaml']
+  args: ['workflows', 'deploy', 'mbcs$_WORKFLOW_NAME-$BRANCH_NAME-$SHORT_SHA', '--source', 'cicd/workflow.yaml']
 
 - id: 'run-workflow'
   name: 'gcr.io/google.com/cloudsdktool/cloud-sdk:slim'
