@@ -1,0 +1,15 @@
+config {
+  type: "view",
+  database: "driven-cw-dev",
+  schema: "analytics_01_staging_bm",
+  name: "Contact_Info_Complete_Decision_Maker_test",
+  description: "Contact Info Complete Decision Maker test"
+}
+
+-- ${util.renderScript(ref("vAccounts"),
+--   ["country", "device_type"],
+--   ["revenue", "pageviews", "sessions"])}
+
+${utils.generateQuery(
+  ref("vAccounts")
+  )}

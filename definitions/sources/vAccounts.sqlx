@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "driven-cw-dev",
+  schema: "Zoho",
+  name: "vAccounts",
+  description: "Zoho vAccounts"
+}

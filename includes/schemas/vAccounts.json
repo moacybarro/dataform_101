@@ -1,0 +1,40 @@
+{
+  "First_Attempted_Contact_Date": {
+    "name": "First_Attempted_Contact_Date",
+    "dataType": "DATE",
+    "description": "First Attempted Contact Date",
+    "precision": null,
+    "order": 1
+  },
+  "Avg_Lead_Site_Score": {
+    "name": "Avg_Lead_Site_Score",
+    "dataType": "FLOAT64",
+    "description": "Avg Lead Site Score",
+    "precision": null,
+    "order": 2
+  },
+  "Contact_Info_Complete_Decision_Maker": {
+    "name": "Contact_Info_Complete_Decision_Maker",
+    "dataType": "BOOL",
+    "description": "Contact Info Complete Decision Maker",
+    "precision": null,
+    "order": 3
+  },
+  "Website": {
+    "name": "Website",
+    "dataType": "STRING",
+    "description": "Company's website address",
+    "is_pii": true,
+    "pii_op": "SHA256",
+    "precision": null,
+    "order": 4
+  },
+  "Vertical": {
+    "name": "Vertical",
+    "dataType": "STRING",
+    "description": "Internal vertical associated to the account",
+    "is_pii": false,
+    "precision": null,
+    "order": 5
+  }
+}
