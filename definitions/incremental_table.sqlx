@@ -1,0 +1,5 @@
+config { type: "incremental" }
+
+select user_id, field_a, field_b, updated_at
+from ${ref("source_data_incremental")}
+${ when(incremental(), `where updated_at > (select max(updated_at) from ${self()})`)}
