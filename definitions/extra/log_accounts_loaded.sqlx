@@ -1,0 +1,12 @@
+config {
+   type: "operations",
+   database: "driven-cw-dev",
+   schema: "dataform",
+   name: "accounts_count_op",
+   description: "Metrics of execution of dim_sit"
+   }
+
+CREATE OR REPLACE table driven-cw-dev.dataform.accounts_count_op AS (
+    SELECT '${ref("accounts")}' as ENTITY_TABLE, COUNT(*) AS RECORD_COUNTS, CURRENT_DATE() AS DT
+    FROM ${ref("accounts")}
+    )

@@ -1,0 +1,14 @@
+{
+  "defaultSchema": "dataform",
+  "assertionSchema": "dataform_assertions",
+  "warehouse": "bigquery",
+  "defaultDatabase": "driven-cw-dev",
+  "defaultLocation": "US",
+  "vars": {
+      "executionSetting":"dev"
+  },
+  "databaseSuffix": "",
+  "schemaSuffix": "",
+  "tablePrefix": ""
+}
+    

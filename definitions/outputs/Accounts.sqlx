@@ -1,0 +1,14 @@
+config {
+  type: "table",
+  database: "driven-cw-dev",
+  schema: "dataform",
+  name: "accounts",
+  description: "Contact Info Complete Decision Maker test"
+}
+
+SELECT
+  CAST(First_Attempted_Contact_Date AS DATE) AS First_Attempted_Contact_Date,
+  CAST(Avg_Lead_Site_Score AS FLOAT64) AS Avg_Lead_Site_Score,
+  CAST(Contact_Info_Complete_Decision_Maker AS BOOL) AS Contact_Info_Complete_Decision_Maker
+FROM
+  ${ref("vAccounts")}
