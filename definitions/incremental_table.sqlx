@@ -1,5 +1,6 @@
 config { 
-    type: "incremental"
+    type: "incremental",
+    protected: true,
 }
 
 select user_id, field_a, field_b, updated_at
