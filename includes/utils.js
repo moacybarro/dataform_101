@@ -22,7 +22,15 @@ function generateQuery(tableName) {
     return statement
   }).join(", ");
 
-  const query = `SELECT ${selectClause} FROM ${tableName}`;
+  var selectClausePluMeta = selectClause.concat(", GENERATE_UUID() AS uuid")
+  selectClausePluMeta = selectClausePluMeta.concat(", CURRENT_TIMESTAMP() AS created_at")
+  selectClausePluMeta = selectClausePluMeta.concat(", SESSION_USER() AS created_by")
+  selectClausePluMeta = selectClausePluMeta.concat(", CURRENT_DATE() AS updated_at")
+  selectClausePluMeta = selectClausePluMeta.concat(", SESSION_USER() AS updated_by")
+  
+
+  // const query = `SELECT ${selectClause} FROM ${tableName}`;
+  const query = `SELECT ${selectClausePluMeta} FROM ${tableName}`;
 
   return query;
 }
