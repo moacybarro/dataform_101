@@ -1,0 +1,12 @@
+
+config {
+  type: "view",
+  description: "Current account records"
+}
+
+select accts.*
+from (select max(runDate) as maxrunDate
+      from ${ref("0401002_Zoho_Accounts_tbl")}     
+      ) as qry1
+      left join ${ref("0401002_Zoho_Accounts_tbl")}    accts
+      on qry1.maxrunDate = accts.runDate
