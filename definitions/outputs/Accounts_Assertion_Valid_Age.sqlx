@@ -1,0 +1,8 @@
+config { type: "assertion" }
+
+SELECT
+  *
+FROM
+  ${ref("accounts")}
+WHERE
+  Age < 1

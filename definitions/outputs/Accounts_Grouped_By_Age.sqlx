@@ -1,0 +1,12 @@
+config {
+  type: "view",
+  name: "account_age_group",
+  tags: ["test", "daily", "hourly"]
+}
+
+SELECT
+  FLOOR(Age / 5) * 5 AS age_group,
+  COUNT(1) AS account_count
+FROM ${ref("accounts")}
+GROUP BY age_group
+ORDER BY age_group

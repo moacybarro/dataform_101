@@ -1,0 +1,7 @@
+config {
+  type: "declaration",
+  database: "driven-insights",
+  schema: "0401002_Zoho_db",
+  name: "0401002_Zoho_Accounts_tbl",
+  description: "Zoho Accounts"
+}
