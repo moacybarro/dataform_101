@@ -1,0 +1,13 @@
+config { 
+    type: "incremental",
+    uniqueKey: ["user_id"],
+  bigquery: {
+    partitionBy: "DATE(updated_at)",
+    updatePartitionFilter:
+        "updated_at >= timestamp_sub(current_timestamp(), interval 24 hour)"
+  } 
+}
+-- WIP: https://cloud.google.com/dataform/docs/incremental-tables#filter_rows_in_an_incremental_table
+select user_id, field_a, field_b, updated_at
+from ${ref("source_data_incremental")}
+${ when(incremental(), `where updated_at > (select max(updated_at) from ${self()})`)}

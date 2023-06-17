@@ -15,7 +15,7 @@ WITH example_dataset AS (
         1 as user_id,
         'a' AS field_a,
         12.5 AS field_b,
-        date_add(current_date(), interval 0 day) AS updated_at
+        date_add(current_timestamp(), interval 0 day) AS updated_at
     )
   UNION ALL
     (
@@ -23,7 +23,7 @@ WITH example_dataset AS (
         2 as user_id,
         'b' AS field_a,
         23.5 AS field_b,
-        date_add(current_date(), interval 0 day) AS updated_at
+        date_add(current_timestamp(), interval 0 day) AS updated_at
     )
   UNION ALL
     (
@@ -31,15 +31,15 @@ WITH example_dataset AS (
         3 as user_id,
         'c' AS field_a,
         6.5 AS field_b,
-        date_add(current_date(), interval 0 day) AS updated_at
+        date_add(current_timestamp(), interval 0 day) AS updated_at
     )
   UNION ALL
     (
       SELECT
         4 as user_id,
         'd' AS field_a,
-        17.2 AS field_b,
-        date_add(current_date(), interval 1 day) AS updated_at
+        17.4 AS field_b,
+        date_add(current_timestamp(), interval 1 day) AS updated_at
     )
 )
 SELECT
