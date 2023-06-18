@@ -1,4 +1,5 @@
-config { type: "assertion" }
+config { type: "assertion",
+dependencies: [ "second_view"] }
 
 SELECT
   *

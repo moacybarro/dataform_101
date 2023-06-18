@@ -1,5 +1,6 @@
 config {
   type: "table",
+  dependencies: [ "first_view"],
   database: "driven-cw-dev",
   schema: "dataform",
   name: "accounts",
