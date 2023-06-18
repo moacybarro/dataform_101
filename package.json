@@ -1,0 +1,7 @@
+{
+  "name": "dataform_101",
+  "dependencies": {
+    "@dataform/core": "2.4.2",
+    "dataform-scd": "https://github.com/dataform-co/dataform-scd/archive/0.3.tar.gz"
+  }
+}
