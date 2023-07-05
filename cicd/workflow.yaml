@@ -4,6 +4,7 @@ main:
     - init:
         assign:
           - repository: ${"projects/" + args.gcp_project + "/locations/us-east1/repositories/" + args.repository}
+          - default_database: ${args.database}
           - default_schema: ${args.dataset}
           - branch: ${args.branch}
           - full_refresh: ${default(map.get(args, "full_refresh"), false)}
@@ -16,6 +17,7 @@ main:
             body:
                 gitCommitish: ${branch}
                 codeCompilationConfig:
+                    defaultDatabase: ${default_database}
                     defaultSchema: ${default_schema}
         result: compilationResult
     - createWorkflowInvocation:
