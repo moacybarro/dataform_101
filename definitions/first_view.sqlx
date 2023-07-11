@@ -1,0 +1,18 @@
+config {
+  type: "view", // Creates a view in BigQuery. Try changing to "table" instead.
+  columns: {
+    test: "A description for the test column", // Column descriptions are pushed to BigQuery.
+  },
+  description: "First View",
+  tags:["hourly", "stage"],
+  dependencies:["zero_view"]
+
+}
+
+-- The rest of a SQLX file contains your SELECT statement used to create the table.
+
+SELECT 1 as test
+
+
+
+
