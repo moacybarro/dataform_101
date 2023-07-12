@@ -4,18 +4,18 @@ config {
   schema: "dataform",
   name: "dim_site_dataform",
   description: "Table for testing sql generation utility",
-  assertions: {
-    nonNull: ["Vertical"],
-    rowConditions: [
-      'Vertical is not null'
-    ]
-  },
   columns: {
     First_Attempted_Contact_Date: "Description of column site_number",
     Avg_Lead_Site_Score: "Description of column site",
     Contact_Info_Complete_Decision_Maker: "Description of column center_number",
     Website: "Description of column division",
     Vertical: "Description of column region"
+  },
+    assertions: {
+    nonNull: ["Vertical"],
+    rowConditions: [
+      'Vertical is not null'
+    ]
   }
 }
 
