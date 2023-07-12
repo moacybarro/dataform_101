@@ -4,7 +4,7 @@ config {
     test: "A description for the test column", // Column descriptions are pushed to BigQuery.
   },
   description: "First View",
-  tags:["hourly", "stage"],
+  tags:["hourly", "stage", "tag1"],
   dependencies:["zero_view"]
 
 }
